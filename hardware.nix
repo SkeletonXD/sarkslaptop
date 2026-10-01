@@ -28,11 +28,7 @@
     fstrim.enable = true;
     libinput.enable = true;
     thermald.enable = true;
-    power-profiles-daemon.enable = false;
-    tlp = {
-      enable = true;
-      pd.enable = true;
-    };
+    power-profiles-daemon.enable = true;
     
     pipewire = {
       enable = true;
