@@ -45,5 +45,8 @@
         DisableTelemetry = true;
       };
     })
+
+    # JETBRAINSS
+    jetbrains.clion jetbrains.rust-rover jetbrains.pycharm
   ];
 }
