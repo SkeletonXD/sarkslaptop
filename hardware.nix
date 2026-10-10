@@ -65,4 +65,7 @@
       RestartSec = "3s";
     };
   };
+
+  zramSwap.enable = true;
+  services.swapspace.enable = true;
 }
