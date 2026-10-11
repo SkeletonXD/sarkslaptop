@@ -66,6 +66,9 @@
     };
   };
 
-  zramSwap.enable = true;
+  zramSwap = {
+    enable = true;
+    memoryPercent = 90;
+  };
   services.swapspace.enable = true;
 }
