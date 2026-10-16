@@ -32,7 +32,7 @@
   environment.systemPackages = with pkgs; [
     # cli
     helix nixd nil git zellij ffmpeg-headless
-    wl-clipboard btop
+    wl-clipboard btop antimicrox
 
     # GUI
     obsidian ayugram-desktop onlyoffice-desktopeditors discord mumble audacity
