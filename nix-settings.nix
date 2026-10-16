@@ -4,9 +4,9 @@
   nixpkgs.config.allowUnfree = true;
   
   nix = {
-    package = pkgs.lix;
+    # package = pkgs.lix;
     settings = {
-      http3 = true;
+      # http3 = true;
       http-connections = 50;
       max-substitution-jobs = 20;
       auto-optimise-store = true;
