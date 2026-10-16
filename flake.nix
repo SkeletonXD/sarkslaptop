@@ -1,8 +1,17 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    impermanence.url = "github:nix-community/impermanence";
-    home-manager.url = "github:nix-community/home-manager";
+    impermanence = {
+      url = "github:nix-community/impermanence";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     pinecone-mc = {
       url = "github:ElyPrismLauncher/Launcher";
@@ -14,7 +23,10 @@
     };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
-      inputs = { nixpkgs.follows = "nixpkgs"; };
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
     };
   };
   outputs = { self,nixpkgs,home-manager,nix-flatpak,impermanence,mac-style-plymouth,... }: {
