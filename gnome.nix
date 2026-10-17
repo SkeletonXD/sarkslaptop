@@ -20,7 +20,7 @@
   };
 
   environment.systemPackages = with pkgs.gnomeExtensions;  [
-    pkgs.gnome-tweaks
+    pkgs.gnome-tweaks pkgs.endeavour
     
     appindicator blur-my-shell burn-my-windows emoji-copy
     touchpad-gesture-customization media-controller runcat
