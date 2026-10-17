@@ -23,7 +23,7 @@
     pkgs.gnome-tweaks
     
     appindicator blur-my-shell burn-my-windows emoji-copy
-    touchpad-gesture-customization media-controller
+    touchpad-gesture-customization media-controller runcat
     wack-sonoma-lockscreen gamemode-shell-extension
   ];
 
