@@ -20,7 +20,7 @@
   };
 
   environment.systemPackages = with pkgs.gnomeExtensions;  [
-    pkgs.gnome-tweaks pkgs.endeavour
+    pkgs.gnome-tweaks pkgs.endeavour pkgs.geary
     
     appindicator blur-my-shell burn-my-windows emoji-copy
     touchpad-gesture-customization media-controller runcat
@@ -29,7 +29,7 @@
 
   
   environment.gnome.excludePackages = with pkgs; [   
-    epiphany geary evince gnome-contacts gnome-weather gnome-maps
+    epiphany evince gnome-contacts gnome-weather gnome-maps
     gnome-software gnome-tour
   ];
 
