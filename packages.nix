@@ -26,8 +26,8 @@
     firejail.enable = true;
     gamemode.enable = true;
     steam.enable = true;
-    starship.enableFishIntegration = true;
   };
+  
   
   environment.systemPackages = with pkgs; [
     # cli
