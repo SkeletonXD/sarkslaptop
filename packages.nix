@@ -34,6 +34,7 @@
     helix nixd nil git zellij ffmpeg-headless
     wl-clipboard btop antimicrox fastfetch-unwrapped
     aircrack-ng mdk4 macchanger
+    taskwarrior3
 
     # GUI
     obsidian ayugram-desktop onlyoffice-desktopeditors discord mumble audacity
