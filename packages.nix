@@ -49,6 +49,6 @@
     })
 
     # JETBRAINSS
-    jetbrains.clion jetbrains.pycharm
+    jetbrains.clion jetbrains.pycharm jetbrains.rust-rover
   ];
 }
