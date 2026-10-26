@@ -5,6 +5,13 @@
   services = {
     
     murmur = { enable = true; password = "youareanidiot"; openFirewall = true; };
+
+
+    taskchampion-sync-server = { enable = true;
+      host = "0.0.0.0"; port = 10222; openFirewall = true;
+      allowClientIds = ["cac09809-88c0-4f5b-9c7f-d59699ff3fa5"];
+    };
+    
     
     flatpak = {
       enable = true;
