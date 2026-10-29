@@ -31,12 +31,7 @@
     thermald.enable = true;
     irqbalance.enable = true;
     power-profiles-daemon.enable = true;
-    ananicy = {
-        enable = true;
-        package = pkgs.ananicy-cpp;
-        rulesProvider = pkgs.ananicy-rules-cachyos;
-    };
-    
+        
     pipewire = {
       enable = true;
       pulse.enable = true;
