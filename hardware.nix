@@ -57,20 +57,37 @@
     };
   };
 
-  systemd.user.services.usbguard-notifier = {
-    description = "USBGuard GNOME Notifier";
-    wantedBy = [ "graphical-session.target" ];
-    partOf = [ "graphical-session.target" ];
-    serviceConfig = {
-      ExecStart = "${pkgs.usbguard-notifier}/bin/usbguard-notifier";
-      Restart = "on-failure";
-      RestartSec = "3s";
-    };
-  };
-
   zramSwap = {
     enable = true;
     memoryPercent = 90;
   };
   services.swapspace.enable = true;
+
+
+  systemd = {
+    services = {
+      nix-daemon.serviceConfig.CPUAffinity = "0-17";
+      libvirtd.serviceConfig.CPUAffinity = "0-17";
+    };
+    
+    settings.Manager.CPUAffinity = "16-17";
+    
+    user = {
+      settings.Manager.CPUAffinity = "16-17";
+      services = {
+        pipewire.serviceConfig.CPUAffinity = "0-17";
+         
+        usbguard-notifier = {
+          description = "USBGuard GNOME Notifier";
+          wantedBy = [ "graphical-session.target" ];
+          partOf = [ "graphical-session.target" ];
+          serviceConfig = {
+            ExecStart = "${pkgs.usbguard-notifier}/bin/usbguard-notifier";
+            Restart = "on-failure";
+            RestartSec = "3s";
+          };
+        };
+      };
+    };
+  };
 }

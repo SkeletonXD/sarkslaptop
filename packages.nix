@@ -31,7 +31,14 @@
     throne = { enable = true; tunMode = { setuid = true; enable = true; }; };
     localsend = {enable = true;openFirewall = true;};
     firejail.enable = true;
-    gamemode.enable = true;
+    gamemode = {
+      enable = true;
+      settings = {
+        cpu = {
+          pin_cores = "0-7"; 
+        };
+      };
+    };
     steam.enable = true;
   };
   
