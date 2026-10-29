@@ -27,8 +27,15 @@
     fwupd.enable = true;
     fstrim.enable = true;
     libinput.enable = true;
+    
     thermald.enable = true;
+    irqbalance.enable = true;
     power-profiles-daemon.enable = true;
+    ananicy = {
+        enable = true;
+        package = pkgs.ananicy-cpp;
+        rulesProvider = pkgs.ananicy-rules-cachyos;
+    };
     
     pipewire = {
       enable = true;
