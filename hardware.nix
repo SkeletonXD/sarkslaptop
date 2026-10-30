@@ -68,15 +68,20 @@
     services = {
       nix-daemon.serviceConfig.CPUAffinity = "0-17";
       libvirtd.serviceConfig.CPUAffinity = "0-17";
+      display-manager.serviceConfig.CPUAffinity = "0-17";
+      flatpak-managed-install.serviceConfig.CPUAffinity = "0-17";
+      home-manager-sark.serviceConfig.CPUAffinity = "0-17";
+      plymouth-quit-wait.serviceConfig.CPUAffinity = "0-17";
+      waydroid-container.serviceConfig.CPUAffinity = "0-17";
+      upower.serviceConfig.CPUAffinity = "0-17";
     };
     
     settings.Manager.CPUAffinity = "16-17";
     
     user = {
-      settings.Manager.CPUAffinity = "16-17";
+      settings.Manager.CPUAffinity = "0-17";
       services = {
-        pipewire.serviceConfig.CPUAffinity = "0-17";
-         
+        "org.gnome.Shell@user".serviceConfig.CPUAffinity = "16-17";
         usbguard-notifier = {
           description = "USBGuard GNOME Notifier";
           wantedBy = [ "graphical-session.target" ];
