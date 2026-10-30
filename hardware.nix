@@ -65,6 +65,11 @@
 
 
   systemd = {
+    
+    
+    sockets."nix-daemon".socketConfig.CPUAffinity = "0-17";
+    
+  
     services = {
       nix-daemon.serviceConfig.CPUAffinity = "0-17";
       libvirtd.serviceConfig.CPUAffinity = "0-17";
