@@ -65,13 +65,14 @@
 
 
   systemd = {
-    
-    
-    sockets."nix-daemon".socketConfig.CPUAffinity = "0-17";
-    
-  
     services = {
       nix-daemon.serviceConfig.CPUAffinity = "0-17";
+      "nix-daemon@" = {
+        overrideStrategy = "asDropin";
+          serviceConfig = {
+            CPUAffinity = "0-17";
+        };
+      };
       libvirtd.serviceConfig.CPUAffinity = "0-17";
       display-manager.serviceConfig.CPUAffinity = "0-17";
       flatpak-managed-install.serviceConfig.CPUAffinity = "0-17";
