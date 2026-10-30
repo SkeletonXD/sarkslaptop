@@ -81,11 +81,7 @@
     user = {
       settings.Manager.CPUAffinity = "0-17";
       services = {
-        "org.gnome.Shell@" = {
-          overrideStrategy = "asDropin";
-          serviceConfig.CPUAffinity = "16-17";
-        };
-        
+        "org.gnome.Shell@user".serviceConfig.CPUAffinity = "16-17";
         usbguard-notifier = {
           description = "USBGuard GNOME Notifier";
           wantedBy = [ "graphical-session.target" ];
