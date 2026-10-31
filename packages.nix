@@ -4,7 +4,7 @@
 
   services = {
     
-    murmur = { enable = true; password = "youareanidiot"; openFirewall = true; };
+    murmur = { enable = true; openFirewall = true; };
 
 
     taskchampion-sync-server = { enable = true;
@@ -51,7 +51,7 @@
     taskwarrior3
 
     # GUI
-    obsidian ayugram-desktop onlyoffice-desktopeditors discord mumble audacity
+    kitty obsidian ayugram-desktop onlyoffice-desktopeditors discord mumble audacity
     inputs.pinecone-mc.packages."${stdenv.hostPlatform.system}".default
     
     # browser
