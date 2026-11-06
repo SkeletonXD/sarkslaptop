@@ -45,7 +45,7 @@
         ./boot.nix ./filesystems.nix ./hardware.nix
         ./virtualisation.nix ./network.nix ./locale.nix
 
-        ./gnome.nix ./packages.nix ./sark.nix
+        ./gnome.nix ./packages.nix ./sark.nix ./hyprland.nix
 
         ./scan-and-print.nix
         
