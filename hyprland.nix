@@ -1,4 +1,4 @@
-{...}:
+{pkgs, ...}:
 {
   programs = {
     hyprland = {
@@ -7,4 +7,6 @@
     };
     hyprlock.enable = true;
   };
+
+  environment.systemPackages = [ pkgs.noctalia ];
 }
