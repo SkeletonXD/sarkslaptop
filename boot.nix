@@ -14,12 +14,7 @@
         enable = true;
         resolution = "2880x1800";
         secureBoot.enable = true;
-        maxGenerations = 3;
-        extraEntries = ''
-          /Windows
-          protocol: uefi
-          path: boot():///EFI/Microsoft/Boot/bootmgfw.efi
-        '';
+        maxGenerations = 5;
       };
       
     };
