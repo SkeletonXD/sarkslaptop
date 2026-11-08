@@ -7,5 +7,5 @@
     };
   };
 
-  environment.systemPackages = [ pkgs.noctalia ];
+  environment.systemPackages = with pkgs; [ noctalia xrdb ];
 }
