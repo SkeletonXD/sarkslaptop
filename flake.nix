@@ -28,8 +28,12 @@
         home-manager.follows = "home-manager";
       };
     };
+    tg-ws-proxy = {
+        url = "github:pialtor/tg-ws-proxy-flake";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self,nixpkgs,home-manager,nix-flatpak,impermanence,mac-style-plymouth,... }: {
+  outputs = { self,nixpkgs,home-manager,nix-flatpak,impermanence,mac-style-plymouth, tg-ws-proxy, ... }: {
     nixosConfigurations.sarkslaptop = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inputs = self.inputs; }; 
