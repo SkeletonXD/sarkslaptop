@@ -82,6 +82,7 @@
       plymouth-quit-wait.serviceConfig.CPUAffinity = "0-17";
       waydroid-container.serviceConfig.CPUAffinity = "0-17";
       upower.serviceConfig.CPUAffinity = "0-17";
+      ollama.serviceConfig.CPUAffinity = "0-15";
     };
     
     settings.Manager.CPUAffinity = "16-17";
