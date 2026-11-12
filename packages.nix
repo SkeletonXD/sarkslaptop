@@ -28,6 +28,9 @@
       environmentVariables = {
         OLLAMA_VULKAN = "1";
         OLLAMA_IGPU_ENABLE = "1";
+        OLLAMA_FLASH_ATTENTION = "1";
+        OLLAMA_NUM_PARALLEL = "1";
+        OLLAMA_MAX_LOADED_MODELS = "1";
       };
 
     };
