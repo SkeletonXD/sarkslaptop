@@ -58,7 +58,7 @@
 
     # GUI
     kitty obsidian ayugram-desktop onlyoffice-desktopeditors discord mumble audacity
-    inputs.pinecone-mc.packages."${stdenv.hostPlatform.system}".default
+    inputs.pinecone-mc.packages."${stdenv.hostPlatform.system}".default nautilus
     inputs.tg-ws-proxy.packages."${stdenv.hostPlatform.system}".default
     
     # browser
