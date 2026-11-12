@@ -21,6 +21,12 @@
         "com.usebottles.bottles" "com.vysp3r.ProtonPlus" "org.vinegarhq.Sober"
       ];
     };
+
+    ollama = {
+      enable = true;
+      package = pkgs.ollama-vulkan;
+    };
+    nextjs-ollama-llm-ui.enable = true;
     
   };
 
