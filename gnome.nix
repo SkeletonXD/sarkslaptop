@@ -4,7 +4,7 @@
   services = {
     udisks2.enable = true;
     displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = false;
+    desktopManager.gnome.enable = true;
   };
 
   programs = {
@@ -19,18 +19,18 @@
     };
   };
 
-  # environment.systemPackages = with pkgs.gnomeExtensions;  [
-  #   pkgs.gnome-tweaks pkgs.geary
+  environment.systemPackages = with pkgs.gnomeExtensions;  [
+    pkgs.gnome-tweaks pkgs.geary
     
-  #   appindicator blur-my-shell burn-my-windows emoji-copy
-  #   touchpad-gesture-customization media-controller runcat
-  #   wack-sonoma-lockscreen gamemode-shell-extension
-  # ];
+    appindicator blur-my-shell burn-my-windows emoji-copy
+    touchpad-gesture-customization media-controller runcat
+    wack-sonoma-lockscreen gamemode-shell-extension
+  ];
 
   
-  # environment.gnome.excludePackages = with pkgs; [   
-  #   epiphany evince gnome-console gnome-maps
-  #   gnome-software gnome-tour
-  # ];
+  environment.gnome.excludePackages = with pkgs; [   
+    epiphany evince gnome-console gnome-maps
+    gnome-software gnome-tour
+  ];
 
 }
