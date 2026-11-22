@@ -9,7 +9,7 @@
     networkmanager.enable = true;
     nameservers = [ "1.1.1.1" "8.8.8.8" ];
     wg-quick.interfaces = {
-       zhurman.configFile = "/boot/nixconff/Zhurman.conf";
+       zhurman.configFile = "/nix/persistent/Zhurman.conf";
     };
     networkmanager.unmanaged = [
        "interface-name:zhurman"
