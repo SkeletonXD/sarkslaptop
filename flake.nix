@@ -48,6 +48,7 @@
         ./nix-settings.nix ./persistence.nix
         ./boot.nix ./filesystems.nix ./hardware.nix
         ./virtualisation.nix ./network.nix ./locale.nix
+        ./windows.nix
 
         ./gnome.nix ./packages.nix ./sark.nix ./hyprland.nix
 
